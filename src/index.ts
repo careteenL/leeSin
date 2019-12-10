@@ -7,6 +7,10 @@ import {
   handlePerformance
 } from './performance'
 
+import {
+  hackhook
+} from './ajax'
+
 export default class LeeSin {
   constructor(options) {
     this.init(options)
@@ -41,7 +45,7 @@ export default class LeeSin {
   }
 
   addListenAjax() {
-
+    hackhook()
   }
 
   addRrweb() {
