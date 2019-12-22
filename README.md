@@ -4,6 +4,8 @@
 
 前端性能监控工具
 
+`Server`见[@careteen/leesin-server](https://github.com/careteenL/leeSin-server)
+
 ## 功能
 
 TODO
