@@ -71,6 +71,19 @@ export const warn: any = function () {
   return e
 }()
 
+export const on = function (event, fn, remove?) {
+  window.addEventListener ? window.addEventListener(event, function a(i) {
+    remove && window.removeEventListener(event, a, true), fn.call(this, i)
+  }, true) : window.attachEvent && window.attachEvent("on" + event, function i(a) {
+    remove && window.detachEvent("on" + event, i), fn.call(this, a)
+  })
+}
+
+export const off = function (event, fn) {
+  return fn ? (window.removeEventListener ? window.removeEventListener(event, fn) : window.detachEvent &&
+  window.detachEvent(event, fn), this) : this
+}
+
 export const parseHash = function (e:string) {
   return (e ? parseUrl(e.replace(/^#\/?/, "")) : "") || "[index]"
 }
@@ -107,4 +120,12 @@ export const findIndex = function(arr, fn) {
    } 
    return carry
   } , -1)
+}
+
+export const onload = (cb) => {
+  if (document.readyState === 'complete') {
+    cb()
+    return
+  }
+  window.addEventListener('load', cb)
 }

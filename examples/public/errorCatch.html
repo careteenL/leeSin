@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LeeSin ErrorCatch Demo</title>
+  <script src="./js/leeSin.js?02"></script>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- <script src="./js/index.js"></script> -->
+  <!-- <script src="./js/jquery-3.3.1.js"></script>
+  <script src="./js/lodash-4.17.5.js"></script> -->
+  <style>
+    .box-wrap {
+      -webkit-user-select: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel panel-success">
+    <div class="panel-heading">LeeSin ErrorCatch Demo</div>
+    <div class="panel-body">
+      <img src="./img/leesin.jpeg" alt="leesin">
+      <div class="box-wrap" contenteditable="true">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    new window['@careteen/leesin']({
+      token: 'careteen',
+      isError: true
+    })
+  </script>
+  <script src="./js/index.js"></script>
+</body>
+</html>

@@ -11,21 +11,21 @@ export let Config = {
   // 脚本延迟上报时间
   outtime: 300,
   // 开启单页面？
-  enableSPA: true,
+  enableSPA: false,
   // 是否自动上报pv
-  autoSendPv: true,
+  autoSendPv: false,
   // 是否上报页面性能数据
-  isPage: true,
+  isPage: false,
   // 是否上报ajax性能数据
-  isAjax: true,
+  isAjax: false,
   // 是否上报页面资源数据
-  isResource: true,
+  isResource: false,
   // 是否上报错误信息
-  isError: true,
+  isError: false,
   // 是否录屏
-  isRecord: true,
+  isRecord: false,
   // 是否上报行为
-  isBehavior: true,
+  isBehavior: false,
   ignore: {
     ignoreErrors: [],
     ignoreUrls: [],

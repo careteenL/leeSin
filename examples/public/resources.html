@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LeeSin Resources Demo</title>
+  <script src="./js/leeSin.js?02"></script>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/jquery-3.3.1.js"></script>
+  <script src="./js/lodash-4.17.5.js"></script>
+  <style>
+    .box-wrap {
+      -webkit-user-select: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel panel-success">
+    <div class="panel-heading">LeeSin Resources Demo</div>
+    <div class="panel-body">
+      <img src="./img/leesin.jpeg" alt="leesin">
+      <div class="box-wrap" contenteditable="true">
+        <ul class="list-group">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    new window['@careteen/leesin']({
+      token: 'careteen',
+      isResource: true
+    })
+  </script>
+  
+</body>
+</html>

@@ -119,6 +119,7 @@ export function handlePerformance(): void {
 
   Util.onload(function () {
     let perfData = reportPerf('onload')
+    console.log(perfData, 'perf')
     report(perfData)
   })  
 }

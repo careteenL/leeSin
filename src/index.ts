@@ -3,9 +3,21 @@ import {
   setConfig
 } from './config'
 
+// import {
+//   on
+// } from './utils'
+
 import {
   handlePerformance
 } from './performance'
+
+import {
+  handleResource
+} from './resources'
+
+import {
+  handleErr
+} from './errorCatch'
 
 import {
   hackhook
@@ -41,7 +53,11 @@ export default class LeeSin {
   }
 
   addListenJs() {
-
+    handleErr()
+    // // js错误或静态资源加载错误
+    // on('error', handleErr)
+    // //promise错误
+    // on('unhandledrejection', handleErr)
   }
 
   addListenAjax() {
@@ -57,6 +73,6 @@ export default class LeeSin {
   }
 
   sendResource() {
-
+    handleResource()
   }
 }

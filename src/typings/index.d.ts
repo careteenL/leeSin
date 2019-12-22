@@ -51,6 +51,7 @@ interface ErrorMsg extends CommonMsg{
 }
 
 interface ResourceMsg extends CommonMsg{
+  r?: any,
   dom?: number // 所有解析时间 domInteractive - responseEnd
   load?: number // 所有资源加载完时间 loadEventStart- fetchStart
   res?: PerformanceEntry[]

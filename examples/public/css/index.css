@@ -1,0 +1,13 @@
+.title {
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.img {
+  margin: 10PX auto;
+  display: block;
+  border: 2px solid #f4b72b;
+  border-radius: 6px;
+  opacity: .7;
+}

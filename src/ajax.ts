@@ -47,6 +47,7 @@ export function handleApi(url, success, time, code, msg, beigin) {
   // 过滤忽略的url
   var include = findIndex(getConfig('ignore').ignoreApis, ignoreApi => url.indexOf(ignoreApi) > -1)
   if (include > -1) return
+  console.log(apiMsg, 'api')
   report(apiMsg)
 }
 
