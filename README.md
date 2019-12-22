@@ -10,8 +10,8 @@ TODO
 
 - 技术监控层面
   - [x] 页面性能监控
-  - [ ] 静态资源性能
-  - [ ] 错误监控
+  - [x] 静态资源性能
+  - [x] 错误监控
   - [x] 接口性能
 - 行为监控层面
   - [ ] 用户行为路径
@@ -22,6 +22,14 @@ TODO
   - [ ] EGG全家桶
 - [ ] 管理后台`@careteen/leesin-admin`
   - [ ] React全家桶
+
+## Examples
+
+```shell
+npm i
+npm run example
+```
+open http://localhost:15566
 
 ## 分析
 
