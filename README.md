@@ -1,12 +1,14 @@
 # @careteen/leesin
 
-## 前言
+## Background
 
-前端性能监控工具
+🚀前端性能监控工具
 
-`Server`见[@careteen/leesin-server](https://github.com/careteenL/leeSin-server)
+- `SDK`见[@careteen/leesin](https://github.com/careteenL/leeSin)
+- `Server`见[@careteen/leesin-server](https://github.com/careteenL/leeSin-server)
+- `Admin`见[@careteen/leesin-admin](https://github.com/careteenL/leeSin-admin)
 
-## 功能
+## Features
 
 TODO
 
@@ -16,11 +18,12 @@ TODO
   - [x] 错误监控
   - [x] 接口性能
 - 行为监控层面
-  - [ ] 用户行为路径
+  - [x] 用户行为路径
   - [ ] 打点监控
   - [ ] 大量log上报策略
   - [ ] 时效策略
 - [ ] 服务端`@careteen/leesin-server`
+  - [x] 简易版
   - [ ] EGG全家桶
 - [ ] 管理后台`@careteen/leesin-admin`
   - [ ] React全家桶
@@ -33,7 +36,7 @@ npm run example
 ```
 open http://localhost:15566
 
-## 分析
+## Analysis
 
 ![performance-timing-flow](./assets/performance-timing-flow.jpg)
 ![performance-timing-desc](./assets/performance-timing-desc.jpg)
