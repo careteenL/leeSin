@@ -1,0 +1,31 @@
+# 前端监控
+
+- sdk
+- server
+- admin
+- 性能监控
+- 错误监控
+- 行为监控
+- PV、UV
+- 数据埋点
+- FP、FCP 等性能指标
+  - 优化性能方式
+- 上报方式
+  - post
+  - gif
+  - sendBeacon
+- 上报时机
+  - requestIdleCallback
+  - setTimeout
+  - 批量
+  - 缓存延迟上报
+- 如何削峰
+- 如何去重
+- js 报错
+- promise 报错
+- vue 报错
+- react 报错
+- 小程序报错
+- sourcemap 如何把错误定位到代码具体行数
+- rrweb 如何接入
+- rrweb 实现原理
