@@ -45,6 +45,9 @@
   - 缓存策略
     - 打包时静态资源都会加 hash，强缓存 cache-control: max-age: 360
     - 协商缓存 etag/if-none-match 、 expires/last-modified-since
+      - 集群部署的项目不建议使用 etag，因为 etag 一般通过文件长度+修改时间计算的 hash，集群部署时，时间会不一样，导致每个节点生成的 etag 值都不一样
+      - 集群部署的项目使用 expires，expires 虽然精确到时分秒会产生一定问题（在 1s 内修改文件多次），但现在项目部署往往自动化，不太可能在 1s 内去修改文件
+      - 项目中往往使用 webpack 打包给文件加 hash，进行强制缓存设置 cache-control，不会走请求，但是如果设置 expires 协商缓存，然后会走一次请求，没改变再读取本地缓存
     - service-worker pwa
     - cdn
   - 预加载和懒加载
@@ -84,6 +87,9 @@
 
 ### 如何做前端监控？
 
+- 采集性能信息
+  - performance
+  - performanceObserver
 - 采集报错信息
   - try-catch 能捕捉同步，捕捉不到异步
   - window.onerror 能捕捉同步异步，当前域名，捕捉不到 promise、语法错误、网络异常
@@ -104,6 +110,14 @@
   - 存储到 localstorage 中， requestIdleCallback 空闲时间上报
   - 流量削峰 rabbitMQ
 - 数据分析和展示
+  - FCP、LCP、CLS、TBT
+  - P50、75 90 99 100
+  - 报警规则；邮件、飞书 bot
+  - 提供 source-map 快速定位到问题错误
+  - 使用 rrweb 录制和回放用户的操作路径
+- 解决问题和复盘
+  - 针对性性能优化
+  - 即使修复线上 bug
 
 ## 资料
 
@@ -111,3 +125,4 @@
 - [Web Vitals 核心指标](https://web.wcrane.cn/1-%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/20-%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/10-%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/1-Web%20Vitals%E6%A0%B8%E5%BF%83%E6%8C%87%E6%A0%87.html)
 - [JavaScript 异常监控策略](https://web.wcrane.cn/1-%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/20-%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/15-%E5%89%8D%E7%AB%AF%E7%A8%B3%E5%AE%9A%E6%80%A7/30-JavaScript%E5%BC%82%E5%B8%B8%E7%9B%91%E6%8E%A7%E7%AD%96%E7%95%A5.html)
 - [分享 3 种常用的前端埋点方式](https://www.cnblogs.com/houxianzhou/p/18001681)
+- [使用 Sentry 做性能监控 - 分析优化篇](https://juejin.cn/post/7151753139052347399)
